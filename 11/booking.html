@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Event - Karoomba! Event Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Book your next event with Karoomba! Fill out our simple form to start planning your perfect celebration with our professional event management team.">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"style="display:flex;align-items:center;gap:0.8rem;">
+                <a href="home.html" class="logo-link" style="display:inline-flex;align-items:center;">
+                    <img src="ima/logo.png" alt="Karoomba logo" class="logo-img" style="display:block; height:72px; width:auto;">
+                </a>
+                <p class="tagline" style="margin-top:0;">Where Imagination Meets Celebration</p>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="shopping.html">Shopping</a></li>
+                    <li><a href="themes.html">Party Themes</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="contact.html">Feedback</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="section-title">Book Your Event</h2>
+            <p class="section-description">Let's Start Planning Your Perfect Celebration</p>
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h3>How It Works</h3>
+                    <ul class="booking-steps">
+                        <li>
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Initial Consultation</h4>
+                                <p>Fill out the form or call us to discuss your vision and requirements.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Proposal & Quote</h4>
+                                <p>We'll create a detailed proposal and provide pricing options.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Planning & Design</h4>
+                                <p>Our team works on bringing your event to life with detailed planning.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <h4>Event Day</h4>
+                                <p>We handle everything while you enjoy your perfectly executed event.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="booking-form">
+                    <form id="event-booking-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="event-type">Event Type</label>
+                            <select id="event-type" name="event-type" required>
+                                <option value="" disabled selected>Select Event Type</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="holiday">Holiday Celebration</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div id="other-event-container" style="display: none; margin-top: 10px;">
+                                <label for="other-event-type">Please specify your event type</label>
+                                <input type="text" id="other-event-type" name="other-event-type">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="event-date">Event Date</label>
+                                <input type="date" id="event-date" name="event-date" min="" required placeholder="">
+                            </div>
+                            <div class="form-group half">
+                                <label for="guests">Number of Guests</label>
+                                <input type="number" id="guests" name="guests" min="1" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Vision</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Karoomba!</h3>
+                    <p>Where Imagination Meets Celebration</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="shopping.html">Shopping</a></li>
+                            <li><a href="themes.html">Party Themes</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="booking.html">Book Now</a></li>
+                            <li><a href="contact.html">Feedback</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html#corporate">Corporate Events</a></li>
+                            <li><a href="services.html#weddings">Weddings</a></li>
+                            <li><a href="services.html#birthdays">Birthday Parties</a></li>
+                            <li><a href="services.html#holidays">Holiday Celebrations</a></li>
+                            <li><a href="services.html#custom">Custom Events</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>About us</h4>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="tac.html">Terms and Conditions</a></li>
+                            <li><a href="story.html">Our story</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Karoomba! Event Management. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for unforgettable celebrations</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventTypeSelect = document.getElementById('event-type');
+            const otherEventContainer = document.getElementById('other-event-container');
+            
+            eventTypeSelect.addEventListener('change', function() {
+                if (this.value === 'other') {
+                    otherEventContainer.style.display = 'block';
+                } else {
+                    otherEventContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

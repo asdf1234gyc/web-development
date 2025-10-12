@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Karoomba! Event Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Browse Karoomba's past events including corporate dinners, birthday celebrations, weddings and more to get inspiration for your next event.">
+    <!-- Open Graph Meta Tags for better social sharing -->
+    <meta property="og:title" content="Event Gallery - Karoomba! Event Management">
+    <meta property="og:description" content="Browse through Karoomba's past events including corporate galas, birthday celebrations, weddings, and more to get inspired for your next event.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karoomba-events.com/gallery.html">
+    <meta property="og:image" content="images/gallery1.jpg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"style="display:flex;align-items:center;gap:0.8rem;">
+                <a href="home.html" class="logo-link" style="display:inline-flex;align-items:center;">
+                    <img src="ima/logo.png" alt="Karoomba logo" class="logo-img" style="display:block; height:72px; width:auto;">
+                </a>
+                <p class="tagline" style="margin-top:0;">Where Imagination Meets Celebration</p>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="shopping.html">Shopping</a></li>
+                    <li><a href="themes.html">Party Themes</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="contact.html">Feedback</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Event Gallery</h2>
+            <p class="section-description">Browse through our past events and get inspired</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="corporate">
+                    <img src="ima\Corporate Gala.png" alt="Corporate Gala Event" loading="lazy">
+                    <div class="overlay">
+                        <h4>Corporate Gala</h4>
+                        <p>An elegant evening for 200 executives</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="ima\Birthday Celebration.png" alt="Birthday Celebration" loading="lazy">
+                    <div class="overlay">
+                        <h4>30th Birthday</h4>
+                        <p>Gatsby-themed celebration</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="ima\Wedding Reception.jpg" alt="Wedding Reception" loading="lazy">
+                    <div class="overlay">
+                        <h4>Wedding Reception</h4>
+                        <p>Enchanted forest theme</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="ima\Product Launch Event.jpg" alt="Product Launch Event" loading="lazy">
+                    <div class="overlay">
+                        <h4>Product Launch</h4>
+                        <p>Tech-inspired interactive experience</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="holiday">
+                    <img src="ima\Holiday Party.jpg" alt="Holiday Party" loading="lazy">
+                    <div class="overlay">
+                        <h4>Holiday Party</h4>
+                        <p>Winter wonderland theme</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="charity">
+                    <img src="ima\Charity Fundraiser.jpg" alt="Charity Fundraiser" loading="lazy">
+                    <div class="overlay">
+                        <h4>Charity Gala</h4>
+                        <p>Raised over $50,000 for local causes</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="event-categories" class="event-categories">
+        <div class="container">
+            <h2 class="section-title">Event Categories</h2>
+            <p class="section-description">Explore events by type</p>
+            
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">All Events</button>
+                <button class="category-btn" data-category="corporate">Corporate</button>
+                <button class="category-btn" data-category="wedding">Weddings</button>
+                <button class="category-btn" data-category="birthday">Birthdays</button>
+                <button class="category-btn" data-category="holiday">Holiday</button>
+                <button class="category-btn" data-category="charity">Charity</button>
+            </div>
+            
+            <div class="search-filter">
+                <div class="search-container">
+                    <input type="text" id="gallery-search" placeholder="Search events..." aria-label="Search events">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            
+            <div class="additional-gallery">
+                <div class="gallery-item" data-category="corporate">
+                    <img src="ima\Annual Conference.jpg" alt="Annual Conference" loading="lazy">
+                    <div class="overlay">
+                        <h4>Annual Conference</h4>
+                        <p>Three-day industry event</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="ima\Beach Wedding.jpg" alt="Beach Wedding" loading="lazy">
+                    <div class="overlay">
+                        <h4>Beach Wedding</h4>
+                        <p>Oceanside ceremony and reception</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="ima\Sweet 16 Party.jpg" alt="Sweet 16 Party" loading="lazy">
+                    <div class="overlay">
+                        <h4>Sweet 16</h4>
+                        <p>Fairy tale princess theme</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="holiday">
+                    <img src="ima\New Year's Eve Party.jpg" alt="New Year's Eve Party" loading="lazy">
+                    <div class="overlay">
+                        <h4>New Year's Eve</h4>
+                        <p>Glamorous countdown celebration</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="charity">
+                    <img src="ima\Fundraising Auction.jpg" alt="Fundraising Auction" loading="lazy">
+                    <div class="overlay">
+                        <h4>Fundraising Auction</h4>
+                        <p>Art-themed charity event</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="ima\Team Building Retreat.jpg" alt="Team Building Retreat" loading="lazy">
+                    <div class="overlay">
+                        <h4>Team Building</h4>
+                        <p>Adventure-themed corporate retreat</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="ima\Garden Wedding.jpg" alt="Garden Wedding" loading="lazy">
+                    <div class="overlay">
+                        <h4>Garden Wedding</h4>
+                        <p>Romantic outdoor celebration</p>
+                        <a href="#" class="view-details"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="ima\40th Birthday.jpg" alt="40th Birthday" loading="lazy">
+                    <div class="overlay">
+                        <h4>40th
+            
+            <div class="cta-container">
+                <a href="booking.html" class="btn btn-primary">Plan Your Event</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Karoomba!</h3>
+                    <p>Where Imagination Meets Celebration</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="shopping.html">Shopping</a></li>
+                            <li><a href="themes.html">Party Themes</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="booking.html">Book Now</a></li>
+                            <li><a href="contact.html">Feedback</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html#corporate">Corporate Events</a></li>
+                            <li><a href="services.html#weddings">Weddings</a></li>
+                            <li><a href="themes.html">Party Themes</a></li>
+                            <li><a href="services.html#birthdays">Birthday Parties</a></li>
+                            <li><a href="services.html#holidays">Holiday Celebrations</a></li>
+                            <li><a href="services.html#custom">Custom Events</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>About us</h4>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="tac.html">Terms and Conditions</a></li>
+                            <li><a href="story.html">Our story</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Karoomba! Event Management. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for unforgettable celebrations</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Viewer Modal -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-image-container">
+                <img id="modal-image" src="" alt="Event image full view">
+            </div>
+            <div class="modal-details">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+            <div class="modal-navigation">
+                <button id="prev-image" class="modal-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-image" class="modal-nav-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Gallery Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const searchInput = document.getElementById('gallery-search');
+            const searchBtn = document.getElementById('search-btn');
+            const noResults = document.getElementById('no-results');
+            
+            // Filter by category
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide gallery items based on category
+                    let visibleItems = 0;
+                    
+                    galleryItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            visibleItems++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show no results message if needed
+                    noResults.style.display = visibleItems === 0 ? 'block' : 'none';
+                    
+                    // Clear search input
+                    searchInput.value = '';
+                });
+            });
+            
+            // Search functionality
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const activeCategory = document.querySelector('.category-btn.active').getAttribute('data-category');
+                
+                let visibleItems = 0;
+                
+                galleryItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    const itemTitle = item.querySelector('h4').textContent.toLowerCase();
+                    const itemDesc = item.querySelector('p').textContent.toLowerCase();
+                    
+                    // Check if item matches both search term and active category
+                    if ((searchTerm === '' || itemTitle.includes(searchTerm) || itemDesc.includes(searchTerm)) && 
+                        (activeCategory === 'all' || itemCategory === activeCategory)) {
+                        item.style.display = 'block';
+                        visibleItems++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Show no results message if needed
+                noResults.style.display = visibleItems === 0 ? 'block' : 'none';
+            }
+            
+            // Search button click
+            searchBtn.addEventListener('click', performSearch);
+            
+            // Search on enter key
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            // Image Modal
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-description');
+            const closeModal = document.querySelector('.close-modal');
+            const prevBtn = document.getElementById('prev-image');
+            const nextBtn = document.getElementById('next-image');
+            const viewButtons = document.querySelectorAll('.view-details');
+            
+            let currentImageIndex = 0;
+            let visibleImages = [];
+            
+            // Open modal when clicking on view details
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get all currently visible images
+                    visibleImages = Array.from(galleryItems).filter(item => 
+                        item.style.display !== 'none'
+                    );
+                    
+                    // Find the index of the clicked image
+                    const clickedItem = this.closest('.gallery-item');
+                    currentImageIndex = visibleImages.indexOf(clickedItem);
+                    
+                    // Update modal content
+                    updateModalContent();
+                    
+                    // Show modal
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                }
+            });
+            
+            // Previous image
+            prevBtn.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+                updateModalContent();
+            });
+            
+            // Next image
+            nextBtn.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+                updateModalContent();
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (modal.style.display === 'flex') {
+                    if (e.key === 'ArrowLeft') {
+                        currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+                        updateModalContent();
+                    } else if (e.key === 'ArrowRight') {
+                        currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+                        updateModalContent();
+                    } else if (e.key === 'Escape') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto'; // Enable scrolling
+                    }
+                }
+            });
+            
+            // Update modal content
+            function updateModalContent() {
+                const currentItem = visibleImages[currentImageIndex];
+                const image = currentItem.querySelector('img');
+                const title = currentItem.querySelector('h4').textContent;
+                const desc = currentItem.querySelector('p').textContent;
+                
+                modalImage.src = image.src;
+                modalImage.alt = image.alt;
+                modalTitle.textContent = title;
+                modalDesc.textContent = desc;
+            }
+        });
+    </script>
+</body>
+</html>

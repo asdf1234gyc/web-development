@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display - Karoomba! Shopping Mall</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Browse Featured Products on Karoomba and Discover Quality Items at Great Prices
+">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"style="display:flex;align-items:center;gap:0.8rem;">
+                <a href="home.html" class="logo-link" style="display:inline-flex;align-items:center;">
+                    <img src="ima/logo.png" alt="Karoomba logo" class="logo-img" style="display:block; height:72px; width:auto;">
+                </a>
+                <p class="tagline" style="margin-top:0;">Where Imagination Meets Celebration</p>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="shopping.html">Shopping</a></li>
+                    <li><a href="themes.html">Party Themes</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="contact.html">Feedback</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-description">Discover Our Most Popular Products</p>
+            
+            <div class="product-grid">
+            </div>
+        </div>
+    </section>
+
+    <section id="more-products" class="more-products">
+        <div class="container">
+            <h2 class="section-title">More Recommended Products</h2>
+            <p class="section-description">Explore Our Complete Product Range</p>
+            
+            
+            <div class="newsletter">
+                <h3>Subscribe to Get the Latest Offers</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Please Enter Your Email Address">
+                    <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Karoomba!</h3>
+                    <p>Where Imagination Meets Celebration</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="shopping.html">Shopping</a></li>
+                            <li><a href="themes.html">Party Themes</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="booking.html">Book Now</a></li>
+                            <li><a href="contact.html">Feedback</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html#corporate">Corporate Events</a></li>
+                            <li><a href="services.html#weddings">Weddings</a></li>
+                            <li><a href="services.html#birthdays">Birthday Parties</a></li>
+                            <li><a href="services.html#holidays">Holiday Celebrations</a></li>
+                            <li><a href="services.html#custom">Custom Events</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>About us</h4>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="tac.html">Terms and Conditions</a></li>
+                            <li><a href="story.html">Our story</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Karoomba! Event Management. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for unforgettable celebrations</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = [
+    {"name": "Star balloons", "price": 15, "image": "ima/Star balloons.jpg", "category": "decor"},
+    {"name": "Gold and silver ribbons", "price": 15, "image": "ima/Gold and silver ribbons.jpg", "category": "decor"},
+    {"name": "LED light strings", "price": 69, "image": "ima/LED light strings.jpg", "category": "decor"},
+    {"name": "Themed plates", "price": 48, "image": "ima/Themed plates.jpg", "category": "tableware"},
+    {"name": "Champagne glass sets", "price": 39, "image": "ima/Champagne glass sets.jpg", "category": "tableware"},
+    {"name": "Candy gift boxes", "price": 79, "image": "ima/Candy gift boxes.jpg", "category": "gifts"},
+    {"name": "neon-sign", "price": 129, "image": "ima/neon-sign.jpg", "category": "decor"},
+    {"name": "Paper flower bouquets", "price": 79, "image": "ima/Paper flower bouquets.jpg", "category": "decor"},
+    {"name": "Party hats", "price": 12, "image": "ima/Party hats.jpg", "category": "gifts"},
+    {"name": "confetti-cannon", "price": 45, "image": "ima/confetti-cannon.jpg", "category": "decor"},
+    {"name": "balloon-arch", "price": 199, "image": "ima/balloon-arch.jpg", "category": "decor"},
+    {"name": "champagne-bucket", "price": 99, "image": "ima/champagne-bucket.jpg", "category": "tableware"},
+    {"name": "sound system", "price": 599, "image": "ima/sound system.jpg", "category": "tableware"},
+    {"name": "photo-backdrop", "price": 38, "image": "ima/photo-backdrop.jpg", "category": "decor"},
+    {"name": "mini-bunting", "price": 18, "image": "ima/mini-bunting.jpg", "category": "decor"}
+
+            ];
+
+            document.querySelectorAll('.product-grid').forEach(grid => {
+                products.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="product-img">
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <div class="price">$${product.price}</div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

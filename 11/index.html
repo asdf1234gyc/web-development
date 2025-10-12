@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karoomba! - Theme Party Event Management</title>
+    <meta http-equiv="refresh" content="2;url=home.html">
+    <meta name="description" content="Karoomba! specializes in creating unforgettable theme parties and events. From corporate gatherings to birthday celebrations, we turn your vision into reality.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: var(--light-color);
+        }
+        .logo h1 {
+            font-family: var(--font-secondary);
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+        .redirect-message {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1>Karoomba!</h1>
+        <p class="tagline">Where Imagination Meets Celebration</p>
+    </div>
+    
+    <div class="loader"></div>
+    
+    <p class="redirect-message">Redirecting to our homepage... <br>If you are not redirected automatically, please <a href="home.html" style="color: var(--primary-color); font-weight: bold;">click here</a>.</p>
+</body>
+</html>
