@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book List</title>
+  <style>
+    body{font-family:Segoe UI, Roboto, Arial, sans-serif;margin:24px;background:#f6f8fa;color:#0b1216}
+    h1{margin-bottom:12px}
+    #books{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .book{background:#fff;padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e6eef4}
+    .book h2{margin:0 0 8px 0;font-size:1.05rem}
+    .book p{margin:4px 0;color:#233041}
+    .book .id{display:block;margin-top:8px;color:#6b7785;font-size:0.85rem}
+    .note{margin-top:16px;color:#7a8696}
+  </style>
+</head>
+<body>
+  <h1>Book List</h1>
+  <div id="books">Loading books…</div>
+  <div class="note">If the page can't load the XML, run a local static server (instructions in README.md).</div>
+
+  <script>
+    // Load book.xml, parse it, and render each book's title, author and price.
+    async function loadBooks(){
+      try{
+        const resp = await fetch('book.xml');
+        if(!resp.ok) throw new Error(resp.status + ' ' + resp.statusText);
+        const text = await resp.text();
+        const xml = new DOMParser().parseFromString(text,'application/xml');
+        const parserError = xml.querySelector('parsererror');
+        if(parserError) throw new Error('XML parse error');
+
+        const list = document.getElementById('books');
+        list.innerHTML = '';
+        const books = xml.getElementsByTagName('book');
+        if(books.length === 0){ list.textContent = 'No books found in XML.'; return }
+
+        for(let i=0;i<books.length;i++){
+          const b = books[i];
+          const id = b.getAttribute('id') || '';
+          const title = b.getElementsByTagName('title')[0]?.textContent || '';
+          const author = b.getElementsByTagName('author')[0]?.textContent || '';
+          const price = b.getElementsByTagName('price')[0]?.textContent || '';
+
+          const card = document.createElement('div');
+          card.className = 'book';
+          card.innerHTML = `
+            <h2>${escapeHtml(title)}</h2>
+            <p><strong>Author:</strong> ${escapeHtml(author)}</p>
+            <p><strong>Price:</strong> ${escapeHtml(price)}</p>
+            <small class="id">id: ${escapeHtml(id)}</small>
+          `;
+          list.appendChild(card);
+        }
+      }catch(err){
+        document.getElementById('books').textContent = 'Failed to load XML: ' + err.message + '.\nMake sure you serve this file over HTTP (see README).';
+        console.error(err);
+      }
+    }
+
+    // Very small escape helper to avoid injecting markup from XML content.
+    function escapeHtml(s){
+      return String(s)
+        .replace(/&/g,'&amp;')
+        .replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;')
+        .replace(/'/g,'&#39;');
+    }
+
+    loadBooks();
+  </script>
+</body>
+</html>
